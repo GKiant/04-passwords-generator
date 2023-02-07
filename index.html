@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generate a <span class="highlighted-text">random password</span></h1>
+      <p>Never use an insecure password again.</p>
+      <div class="input-container">
+        <input
+          id="set-password-length"
+          type="number"
+          placeholder="Set password length: 3-32"
+          min="3"
+          max="32"
+        />
+        <button id="generate-btn" class="generate-password-btn">
+          Generate passwords
+        </button>
+      </div>
+      <hr align="left" />
+
+      <div class="result-container">
+        <button
+          id="first-password"
+          class="output-btn"
+          onclick="copyText(firstButtonEl)"
+        >
+          placeholder
+        </button>
+        <button
+          id="second-password"
+          class="output-btn"
+          onclick="copyText(secondButtonEl)"
+        >
+          placeholder
+        </button>
+      </div>
+      <h2 id="error"></h2>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
