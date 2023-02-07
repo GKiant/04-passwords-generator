@@ -126,6 +126,8 @@ generatePasswordEl.addEventListener('click', () => {
 });
 
 const copyText = (text) => {
-  navigator.clipboard.writeText(text.textContent);
-  alert('Password was saved to your clipboard.');
+  if (text.textContent) {
+    navigator.clipboard.writeText(text.textContent);
+    alert('Password was saved to your clipboard.');
+  }
 };
